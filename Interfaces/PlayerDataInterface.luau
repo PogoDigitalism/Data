@@ -21,6 +21,7 @@ AdminTemplate = SerDes.serialize(AdminTemplate) :: typeof(AdminTemplate)
 DevTemplate = SerDes.serialize(DevTemplate) :: typeof(DevTemplate)
 
 local GROUP_ID = 1046838214
+local TEST_PLACE_ID = 121183047577587
 
 type data_template = typeof(DevTemplate)
 type function getReturnValue(key, base_template)
@@ -51,7 +52,7 @@ local FORCE_MOCK = true
 local DEV_MODE = true
 local DISABLE_ADMIN = true
 
-if game.PlaceId == 121183047577587 then
+if game.PlaceId == TEST_PLACE_ID then
 	FORCE_MOCK = false
 	DEV_MODE = false
 	DISABLE_ADMIN = true
