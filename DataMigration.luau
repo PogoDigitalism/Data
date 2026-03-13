@@ -39,9 +39,7 @@ function DataMigration.applyMigration(playerData: template)
             error(`No migration version for {nextVersion}`)
         end
         
-        warn(`Run migration function for {nextVersion}`, playerData)
         migrationFunc(playerData)
-        warn(`Post migration:`, playerData)
         migration_version = nextVersion
         
         meta.migration_version = migration_version
